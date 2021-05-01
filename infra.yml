@@ -1,0 +1,13 @@
+---
+- hosts: "{{ hosts }}"
+  connection: "{{ connection_type }}"
+  gather_facts: no
+
+  vars_files:
+    - group_vars/all.yml
+    #- group_vars/projects/{{ project }}/environment/{{ app_environment }}.yml
+    #- group_vars/projects/{{ project }}/application/{{ app_name }}.yml
+
+  roles:
+    - { role: 'roles/uptime' }
+    - { role: 'roles/install_packages' }

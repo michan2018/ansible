@@ -1,0 +1,9 @@
+# ansible connection
+connection_type: ssh
+
+# ansible vault
+my_username: read
+my_password: !vault |
+          $ANSIBLE_VAULT;1.2;AES256;dev
+          3132                          --- REMOVED  ---                     9044835748935
+          3473                          --- REMOVED  ---                     6735467153244
